@@ -1,0 +1,59 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  * {
+    @apply border-olive/20;
+  }
+
+  html {
+    scroll-behavior: smooth;
+  }
+
+  body {
+    @apply bg-charcoal text-beige font-body antialiased;
+    font-feature-settings: "ss01" on;
+  }
+
+  /* Visible, on-brand keyboard focus — never removed, only restyled */
+  :focus-visible {
+    outline: 1.5px solid theme("colors.olive.bright");
+    outline-offset: 3px;
+    border-radius: 1px;
+  }
+
+  ::selection {
+    background-color: theme("colors.crimson.DEFAULT");
+    color: theme("colors.beige.bright");
+  }
+
+  /* Thin, document-like scrollbar */
+  ::-webkit-scrollbar {
+    width: 10px;
+  }
+  ::-webkit-scrollbar-track {
+    background: theme("colors.charcoal.DEFAULT");
+  }
+  ::-webkit-scrollbar-thumb {
+    background: theme("colors.gunmetal.light");
+    border: 2px solid theme("colors.charcoal.DEFAULT");
+  }
+}
+
+@layer utilities {
+  .text-stroke-hairline {
+    -webkit-text-stroke: 0.5px theme("colors.olive.dim");
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
