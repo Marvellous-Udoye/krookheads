@@ -36,5 +36,5 @@ export const ctaConfig: CtaConfig = {
 export const socialLinks: SocialLinks = {
   x: "https://x.com/krookheadsnft?s=11",
   discord: "https://discord.gg/krookheads",
-  openSea: "https://opensea.io/collection/krookheads",
+  openSea: "https://opensea.io/collection/krookheads-5555/overview",
 };
